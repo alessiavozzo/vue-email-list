@@ -11,9 +11,10 @@
 
     <div id='app'>
         <h1>Email list</h1>
-        <ul>
+        <ul v-if="emailList.length === 10">
             <li v-for="email in emailList">{{email}}</li>
         </ul>
+        <p v-else>Loading...</p>
     </div>
     
 

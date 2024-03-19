@@ -12,10 +12,10 @@ createApp({
         getSingleEmail() {
             axios
             .get("https://flynn.boolean.careers/exercises/api/random/mail")
-            .then(email => {
-                //console.log(email);
-                console.log(email.data.response);
-                this.singleEmail = email.data.response;
+            .then(response => {
+                console.log(response);
+                console.log(response.data.response);
+                this.singleEmail = response.data.response;
                 this.emailList.push(this.singleEmail);
             })
         },
